@@ -1,0 +1,40 @@
+
+Iteration 1 || alignment loss: 0.0478
+Iteration 2 || alignment loss: 0.0457
+Iteration 3 || alignment loss: 0.0450
+Iteration 4 || alignment loss: 0.0484
+Iteration 5 || alignment loss: 0.0489
+Iteration 6 || alignment loss: 0.0447
+Iteration 7 || alignment loss: 0.0463
+Iteration 8 || alignment loss: 0.0472
+Iteration 9 || alignment loss: 0.0460
+Iteration 10 || alignment loss: 0.0481
+Iteration 11 || alignment loss: 0.0470
+Iteration 12 || alignment loss: 0.0466
+Iteration 13 || alignment loss: 0.0476
+Iteration 14 || alignment loss: 0.0479
+Iteration 15 || alignment loss: 0.0451
+Iteration 16 || alignment loss: 0.0456
+Iteration 17 || alignment loss: 0.0456
+Iteration 18 || alignment loss: 0.0474
+Iteration 19 || alignment loss: 0.0481
+Iteration 20 || alignment loss: 0.0482
+Iteration 21 || alignment loss: 0.0524
+Iteration 22 || alignment loss: 0.0481
+Iteration 23 || alignment loss: 0.0446
+Iteration 24 || alignment loss: 0.0477
+Iteration 25 || alignment loss: 0.0478
+Iteration 26 || alignment loss: 0.0454
+Iteration 27 || alignment loss: 0.0501
+Iteration 28 || alignment loss: 0.0466
+Iteration 29 || alignment loss: 0.0459
+------------------------------------------------------------------------------------
+Accuracy:0.500	Recall:0.372	Precision: 0.381	F1:0.376	AUC:0.510
+Traceback (most recent call last):
+  File "/home/dahn017/courses/cs260/project/src/main.py", line 54, in <module>
+    main()
+  File "/home/dahn017/courses/cs260/project/src/main.py", line 51, in main
+    train(dataset, config)
+  File "/home/dahn017/courses/cs260/project/src/train.py", line 82, in train
+    wandb.log(results)
+NameError: name 'wandb' is not defined

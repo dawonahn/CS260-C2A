@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/dahn017/courses/cs260/project/src/main.py", line 55, in <module>
+    main()
+  File "/home/dahn017/courses/cs260/project/src/main.py", line 51, in main
+    results = train(dataset, config)
+  File "/home/dahn017/courses/cs260/project/src/train.py", line 59, in train
+    gwd = GW_distance_uniform(x.transpose(2,1), y.transpose(2,1))
+  File "/home/dahn017/courses/cs260/project/src/ot.py", line 315, in GW_distance_uniform
+    return GW_distance(X, Y, p, q, lamda=lamda, iteration=iteration, OT_iteration=OT_iteration)
+  File "/home/dahn017/courses/cs260/project/src/ot.py", line 267, in GW_distance
+    T, Cst = GW_torch_batch(Cs, Ct, bs, n, m, p, q, beta=lamda, iteration=iteration, OT_iteration=OT_iteration)
+  File "/home/dahn017/courses/cs260/project/src/ot.py", line 289, in GW_torch_batch
+    gamma = IPOT_torch_batch_uniform(C_gamma, bs, n, m, beta=beta, iteration=OT_iteration)
+  File "/home/dahn017/courses/cs260/project/src/ot.py", line 249, in IPOT_torch_batch_uniform
+    T = delta * Q * sigma.transpose(2,1)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB (GPU 2; 47.54 GiB total capacity; 46.45 GiB already allocated; 59.62 MiB free; 46.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dahn017/courses/cs260/project/src/main.py", line 53, in <module>
+    main()
+  File "/home/dahn017/courses/cs260/project/src/main.py", line 49, in main
+    dataset = dataset_loader(config)
+  File "/home/dahn017/courses/cs260/project/src/data.py", line 26, in dataset_loader
+    train_text_embed = np.nan_to_num(text_embed)[train_idxs]
+NameError: name 'train_idxs' is not defined

@@ -1,0 +1,32 @@
+
+Iteration 1 || alignment loss: 0.0455
+Iteration 2 || alignment loss: 0.0446
+Iteration 3 || alignment loss: 0.0477
+Iteration 4 || alignment loss: 0.0460
+Iteration 5 || alignment loss: 0.0457
+Iteration 6 || alignment loss: 0.0483
+Iteration 7 || alignment loss: 0.0463
+Iteration 8 || alignment loss: 0.0482
+Iteration 9 || alignment loss: 0.0459
+Iteration 10 || alignment loss: 0.0458
+Iteration 11 || alignment loss: 0.0458
+Iteration 12 || alignment loss: 0.0465
+Iteration 13 || alignment loss: 0.0477
+Iteration 14 || alignment loss: 0.0447
+Iteration 15 || alignment loss: 0.0447
+Iteration 16 || alignment loss: 0.0467
+Iteration 17 || alignment loss: 0.0484
+Iteration 18 || alignment loss: 0.0461
+Iteration 19 || alignment loss: 0.0449
+Iteration 20 || alignment loss: 0.0474
+Iteration 21 || alignment loss: 0.0492
+Iteration 22 || alignment loss: 0.0474
+Iteration 23 || alignment loss: 0.0467
+Iteration 24 || alignment loss: 0.0452
+Iteration 25 || alignment loss: 0.0461
+Iteration 26 || alignment loss: 0.0455
+Iteration 27 || alignment loss: 0.0491
+Iteration 28 || alignment loss: 0.0447
+Iteration 29 || alignment loss: 0.0473
+------------------------------------------------------------------------------------
+Accuracy:0.472	Recall:0.372	Precision: 0.356	F1:0.364	AUC:0.452

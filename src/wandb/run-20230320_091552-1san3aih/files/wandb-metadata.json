@@ -1,0 +1,207 @@
+{
+    "os": "Linux-5.13.0-41-generic-x86_64-with-glibc2.31",
+    "python": "3.9.15",
+    "heartbeatAt": "2023-03-20T16:15:52.721846",
+    "startedAt": "2023-03-20T16:15:52.370907",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/dahn017/courses/cs260/project/src/main.py",
+    "codePath": "main.py",
+    "host": "coldbrew",
+    "username": "dahn017",
+    "executable": "/home/dahn017/miniconda3/envs/tensor/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2.3188125000000013,
+        "min": 2200.0,
+        "max": 4402.733999999998
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 4.019,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.4,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 3.983,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 4402.734
+        }
+    ],
+    "disk": {
+        "total": 915.4219207763672,
+        "used": 808.2289505004883
+    },
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_count": 3,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51050315776
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51050315776
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51050315776
+        }
+    ],
+    "memory": {
+        "total": 503.53041076660156
+    }
+}
