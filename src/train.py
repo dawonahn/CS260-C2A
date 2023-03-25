@@ -5,6 +5,26 @@ from clf import *
 from fc import *
 from ot import *
 
+def got(x, y):
+	''' x: embedding from CLIP, y: embedding from non-CLIP
+	'''
+	cos_distance = cost_matrix_batch_torch(x.transpose(2, 1), y.transpose(2, 1))
+	cos_distance = cos_distance.transpose(1,2)
+
+	beta = 0.1
+	min_score = cos_distance.min()
+	max_score = cos_distance.max()
+	threshold = min_score + beta * (max_score - min_score)
+	cos_dist = torch.nn.functional.relu(cos_distance - threshold)
+
+	wd = - IPOT_distance_torch_batch_uniform(C=cos_dist, bs=x.size(0), n=x.size(1), m=y.size(1), iteration=30)
+	gwd = GW_distance_uniform(x.transpose(2,1), y.transpose(2,1))
+	twd = .5 * torch.mean(gwd) + .5 * torch.mean(wd)
+
+	return twd
+
+
+
 def train(dataset, config):
 
 	device = config.device
@@ -14,6 +34,11 @@ def train(dataset, config):
 	train_img_embed = dataset.train_img_embed
 	test_text_embed = dataset.test_text_embed
 	test_img_embed = dataset.test_img_embed
+
+	clip_train_text_embed = dataset.clip_train_text_embed
+	clip_train_img_embed = dataset.clip_train_img_embed
+	clip_test_text_embed = dataset.clip_test_text_embed
+	clip_test_img_embed = dataset.clip_test_img_embed
 
 	N = train_text_embed.shape[0]
 	dim1 = train_text_embed.shape[-1]
@@ -49,6 +74,8 @@ def train(dataset, config):
 		for batch in batchs:
 			opt.zero_grad()
 			# loss = torch.zeros(1).to(device)
+			clip_batch_x = clip_train_text_embed[old_b : batch]
+			clip_batch_y = clip_train_img_embed[old_b : batch]
 			batch_x = train_text_embed[old_b : batch]
 			batch_y = train_img_embed[old_b : batch]
 			x = mlp1(batch_x).reshape(-1, output_dim * (k), 1)
@@ -65,19 +92,11 @@ def train(dataset, config):
 			train_result = pt_evaluate(pred, batch_y_train, verbose=False)
 
 			# Alignment
-			cos_distance = cost_matrix_batch_torch(x.transpose(2, 1), y.transpose(2, 1))
-			cos_distance = cos_distance.transpose(1,2)
+			text_gwd = got(clip_batch_x, clip_batch_x)
+			img_gwd = got(clip_batch_y, clip_batch_y)
+			loss = loss + text_gwd + img_gwd
 
-			beta = 0.1
-			min_score = cos_distance.min()
-			max_score = cos_distance.max()
-			threshold = min_score + beta * (max_score - min_score)
-			cos_dist = torch.nn.functional.relu(cos_distance - threshold)
 
-			wd = - IPOT_distance_torch_batch_uniform(C=cos_dist, bs=x.size(0), n=x.size(1), m=y.size(1), iteration=30)
-			gwd = GW_distance_uniform(x.transpose(2,1), y.transpose(2,1))
-			twd = .5 * torch.mean(gwd) + .5 * torch.mean(wd)
-			loss = loss + twd
 
 
 			old_b = batch
