@@ -74,8 +74,8 @@ def train(dataset, config):
 		for batch in batchs:
 			opt.zero_grad()
 			# loss = torch.zeros(1).to(device)
-			clip_batch_x = clip_train_text_embed[old_b : batch]
-			clip_batch_y = clip_train_img_embed[old_b : batch]
+			clip_batch_x = clip_train_text_embed[old_b : batch].reshape(bs, -1, 1)
+			clip_batch_y = clip_train_img_embed[old_b : batch].reshape(bs, -1, 1)
 			batch_x = train_text_embed[old_b : batch]
 			batch_y = train_img_embed[old_b : batch]
 			x = mlp1(batch_x).reshape(-1, output_dim * (k), 1)
@@ -113,7 +113,9 @@ def train(dataset, config):
 		test_concat_aligned = torch.hstack([aligned_test_text_embed, aligned_test_img_embed])
 		test_pred = classifier(test_concat_aligned)
 		test_result = pt_evaluate(test_pred, y_test, verbose=False)
-		print(f"Iteration {i} || total loss: {loss.item():.4f} alignmet loss: {twd.item():.4f} Accuracy: {train_result['acc']:.4f} Test Accuracy: {test_result['acc']:.4f}")
+		print(f"Iteration {i} || total loss: {loss.item():.4f}"
+			  f"text alignmet loss: {text_gwd.item():.4f} img alignmet loss: {img_gwd.item():.4f}"
+			  f"Accuracy: {train_result['acc']:.4f} Test Accuracy: {test_result['acc']:.4f}")
 
 	# results = sklearn_logress(x_train, x_test, y_train, y_test)
 	test_result['tr_loss'] = loss_lst

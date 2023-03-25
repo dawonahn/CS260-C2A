@@ -17,7 +17,7 @@ def dataset_loader(config):
 
 
     text_embed = np.load(f'{data_path}/pretrained/text_{llm}_embeds.npy')
-    img_embed = np.load(f'{data_path}/pretrained/text_{lvm}_embeds.npy')
+    img_embed = np.load(f'{data_path}/pretrained/img_{lvm}_embeds.npy')
 
     y_train = np.load(f'{data_path}/y_train.npy')
     y_valid = np.load(f'{data_path}/y_valid.npy')
@@ -32,7 +32,7 @@ def dataset_loader(config):
     test_img_embed = np.nan_to_num(img_embed)[test_indices]
 
     clip_text_embed = np.load(f'{data_path}/pretrained/text_clip_embeds.npy')
-    clip_img_embed = np.load(f'{data_path}/pretrained/text_clip_embeds.npy')
+    clip_img_embed = np.load(f'{data_path}/pretrained/img_clip_embeds.npy')
     clip_train_text_embed = np.nan_to_num(clip_text_embed)[train_indices]
     clip_test_text_embed = np.nan_to_num(clip_text_embed)[test_indices]
     clip_train_img_embed = np.nan_to_num(clip_img_embed)[train_indices]

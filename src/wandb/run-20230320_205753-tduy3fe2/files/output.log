@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 55, in <module>
-    main()
-  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 51, in main
-    results = train(dataset, config)
-  File "/home/dahn017/courses/cs260/CS260-MMA/src/train.py", line 60, in train
-    batch_y_train = y_train[train_indices[old_b:batch]]
-IndexError: index 937 is out of bounds for dimension 0 with size 844
