@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 55, in <module>
+    main()
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 51, in main
+    results = train(dataset, config)
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/train.py", line 64, in train
+    train_result = pt_evaluate(loss, pred)
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/clf.py", line 36, in pt_evaluate
+    acc = tmf.accuracy(pred, true, task=task)
+NameError: name 'tmf' is not defined

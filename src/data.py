@@ -32,12 +32,12 @@ def dataset_loader(config):
     data_dict.text_embed = torch.FloatTensor(np.nan_to_num(text_embed)).to(device)
     data_dict.img_embed = torch.FloatTensor(np.nan_to_num(img_embed)).to(device)
     data_dict.train_text_embed = torch.FloatTensor(train_text_embed).to(device)
-    data_dict.test_text_embed = torch.FloatTensor(test_text_embed)
+    data_dict.test_text_embed = torch.FloatTensor(test_text_embed).to(device)
     data_dict.train_img_embed = torch.FloatTensor(train_img_embed).to(device)
-    data_dict.test_img_embed = torch.FloatTensor(test_img_embed)
-    data_dict.y_train = y_train
-    data_dict.y_valid = y_valid
-    data_dict.y_test = y_test
+    data_dict.test_img_embed = torch.FloatTensor(test_img_embed).to(device)
+    data_dict.y_train = torch.FloatTensor(y_train).reshape(-1, 1).to(device)
+    data_dict.y_valid = torch.FloatTensor(y_valid).reshape(-1, 1).to(device)
+    data_dict.y_test = torch.FloatTensor(y_test).reshape(-1, 1).to(device)
     data_dict.train_indices = train_indices
     data_dict.valid_indices = valid_indices
     data_dict.test_indices = test_indices

@@ -1,0 +1,19 @@
+> /home/dahn017/courses/cs260/CS260-MMA/src/train.py(62)train()
+-> pred = classifier(concat_aligned)
+torch.Size([64, 1024, 1])
+torch.Size([64])
+--KeyboardInterrupt--
+Traceback (most recent call last):
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 55, in <module>
+    main()
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 51, in main
+    results = train(dataset, config)
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/train.py", line 62, in train
+    pred = classifier(concat_aligned.reshape(bs, -1))
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/train.py", line 62, in train
+    pred = classifier(concat_aligned.reshape(bs, -1))
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

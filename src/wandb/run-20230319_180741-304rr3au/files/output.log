@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/dahn017/courses/cs260/project/src/main.py", line 53, in <module>
-    main()
-  File "/home/dahn017/courses/cs260/project/src/main.py", line 50, in main
-    train()
-TypeError: train() missing 3 required positional arguments: 'dataset', 'mlps', and 'config'

@@ -1,0 +1,47 @@
+------------------------------------------------------------------------------------
+Accuracy: 0.453	Recall: 0.269	Precision: 0.304	F1:0.286	AUC:0.449
+------------------------------------------------------------------------------------
+Accuracy: 0.625	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.642
+------------------------------------------------------------------------------------
+Accuracy: 0.625	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.580
+------------------------------------------------------------------------------------
+Accuracy: 0.688	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.715
+------------------------------------------------------------------------------------
+Accuracy: 0.516	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.561
+------------------------------------------------------------------------------------
+Accuracy: 0.547	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.540
+------------------------------------------------------------------------------------
+Accuracy: 0.656	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.778
+------------------------------------------------------------------------------------
+Accuracy: 0.641	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.659
+------------------------------------------------------------------------------------
+Accuracy: 0.594	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.650
+------------------------------------------------------------------------------------
+Accuracy: 0.562	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.778
+------------------------------------------------------------------------------------
+Accuracy: 0.578	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.595
+------------------------------------------------------------------------------------
+Accuracy: 0.562	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.648
+------------------------------------------------------------------------------------
+Accuracy: 0.547	Recall: 0.000	Precision: 0.000	F1:0.000	AUC:0.499
+Iteration 1 || total loss: 0.7597 alignmet loss: 0.0446 Accuracy: 0.5469
+Traceback (most recent call last):
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 55, in <module>
+    main()
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/main.py", line 51, in main
+    results = train(dataset, config)
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/train.py", line 96, in train
+    test_pred = classifier(test_concat_aligned)
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dahn017/courses/cs260/CS260-MMA/src/fc.py", line 29, in forward
+    return self.main(x)
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1212, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/dahn017/miniconda3/envs/tensor/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (212x512 and 1024x1)
